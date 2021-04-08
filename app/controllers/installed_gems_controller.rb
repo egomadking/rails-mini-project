@@ -1,0 +1,2 @@
+class InstalledGemsController < ApplicationController
+end
