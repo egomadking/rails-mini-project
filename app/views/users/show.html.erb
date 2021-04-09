@@ -1,0 +1,15 @@
+<h2><%= @user.username %></h2>
+<h2>Gem Folder Path</h2>
+<em><%= @user.gem_folder %></em>
+<% if @user.installed_gems.length > 0 %>
+<h2>Gems Installed Locally</h2>
+<ul>
+  <% @user.installed_gems.each do |g| %>
+    <%= link_to g.name, g %>
+    <p> <%= @user.gem_notes(g) %></p>
+  <% end %>
+</ul>
+
+<% else %>
+<h2>No gems have been added yet</h2>
+<% end %>

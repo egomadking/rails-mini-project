@@ -1,0 +1,9 @@
+<h2>
+
+  <% if @installed_gem.url %>
+    <%= link_to @installed_gem.name, @installed_gem.url %>
+  <% else %>
+    <%= @installed_gem.name %>
+  <% end %>
+
+</h2>
